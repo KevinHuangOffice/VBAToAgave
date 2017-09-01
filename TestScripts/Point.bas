@@ -71,3 +71,13 @@ Sub cbInvertIfNegative_Click()
         Points(2).InvertIfNegative = False
     End If
 End Sub
+
+Sub cbShadow_Click()
+    Set SC = ActiveSheet.ChartObjects(1).Chart.SeriesCollection
+    Set Points = SC(1).Points
+    If ActiveSheet.cbShadow.Value = True Then
+        Points(2).Shadow = True
+    Else
+        Points(2).Shadow = False
+    End If
+End Sub
